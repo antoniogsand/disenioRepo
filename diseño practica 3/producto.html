@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="producto.css">
+</head>
+
+<body>
+    <header>
+            <nav>
+                <a href="index.html">
+                    <img src="imagenes/logo.png"width= "120px">
+                    </a>
+                <ul id="enlaces">
+                    <li><a href="novedades.html">Novedades</a></li>
+                    <li><a href="novedades.html">Novedades</a></li>
+                    <li><a href="novedades.html">Novedades</a></li>
+                </ul>
+                <div id="iconos">
+                    <img src="imagenes/lupa.png"width= "18px" height="18px">
+                    <img src="imagenes/cesta.png" width="18px" height="18px" alt="cesta-compra">
+                    </a>
+                </div>
+            </nav>
+    </header>
+    <main>
+    <section class="vista-producto">
+        <div class="galeria-producto">
+            <div class="imagen-principal">
+                <img src="imagenes/producto1.jpg" alt="Camiseta - Foto Perfil 1">
+            </div>
+            <div class="miniaturas-imagen">
+                <img src="imagenes/producto2.jpg" alt="Camiseta - Foto Perfil 2">
+                <img src="imagenes/producto3.jpg" alt="Camiseta - Foto Perfil 3">
+                <img src="imagenes/producto4.jpg" alt="Camiseta - Foto Perfil 4">
+            </div>
+        </div>
+
+        <div class="detalles-producto">
+            <h1 class="nombre-producto">NOMBRE PRODUCTO</h1>
+            <p class="precio-producto">PRECIO</p>
+
+            <div class="opciones selector-color">
+                <label for="seleccionar-color">SELECCIONAR COLOR</label>
+                <div class="opciones-color">
+                    <span class="opcion-color circulo" data-color="negro"></span>
+                    <span class="opcion-color circulo" data-color="blanco"></span>
+                    <span class="opcion-color circulo" data-color="amarillo"></span>
+                    <span class="opcion-color circulo" data-color="azul"></span>
+                </div>
+            </div>
+
+            <div class="opciones selector-talla">
+                <label for="seleccionar-talla">SELECCIONAR TALLA</label>
+                <div class="opciones-talla">
+                    <span class="opcion-talla circulo" data-size="S">S</span>
+                    <span class="opcion-talla circulo" data-size="M">M</span>
+                    <span class="opcion-talla circulo" data-size="L">L</span>
+                    <span class="opcion-talla circulo" data-size="XL">XL</span>
+                </div>
+            </div>
+
+            <div class="opciones selector-cantidad">
+                <label for="cantidad">CANTIDAD</label>
+                <div class="controles-cantidad">
+                    <button class="cantidad-menos">-</button>
+                    <input type="number" id="cantidad" value="1" min="1" max="99" aria-label="Cantidad del producto">
+                    <button class="cantidad-mas">+</button>
+                </div>
+            </div>
+
+            <div class="acciones">
+                <button class="boton-anadir-carrito">AÑADIR</button>
+                <button class="boton-comprar-ahora">COMPRAR</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contenedor-descripcion-producto">
+        <h2>DESCRIPCIÓN</h2>
+        <div class="caja-descripcion-producto">
+            <p>Descripción detallada del producto, características e información relevante para el cliente.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+        <div id="izquierda">
+            <div id="logoFooter">
+                <img src="imagenes/logo_blanco.svg" height="50px" width="150px">
+            </div>
+            <div id="textoFooter">
+                <div>
+                <p class="parrafosFooter">Contacto</p>
+                </div>
+                <div>
+                <p class="parrafosFooter">Ayuda</p>
+                </div>
+                <div>
+                <p class="parrafosFooter">Trabaja con nosotros</p>
+                </div>
+            </div>
+            <div class="logos">
+                    <img id="logoInstagram" src="imagenes/instagram.jpg" height="50px" width="50px" alt="Instagram">
+                    <img id="logoFb" src="imagenes/facebook.png" height="50px" width="50px" alt="Facebook">
+                    <img id="logoX" src="imagenes/x.jpg" height="50px" width="50px" alt="X">
+                    <img id="tikTok" src="imagenes/tiktok.png" height="50px" width="50px" alt="Tiktok">
+            </div>
+        </div>
+        <div id="centro">
+                <a href="formulario.html">
+                    <div class="segundaCaja">
+                    <p id="parrafo">¿Tienes algo que decirnos?¡No te lo calles y contacta con nosotros!</p>
+                </div>
+                </a>
+        </div>
+        <div id="derecha">
+            <img src="imagenes/halloween.gif" height="250">
+            </div>
+    </footer>
+</body>
+</html>

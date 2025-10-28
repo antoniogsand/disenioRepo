@@ -1,0 +1,193 @@
+body {
+    /* el margin cero es para anular */
+    margin: 0;
+    display:grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+}
+header{
+    /* para colores con valores hexadecimales
+    hay que poner # antes del valor */
+    font-family: 'Arial', sans-serif;
+    padding: 10px 20px;
+}
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+#enlaces{
+    display: flex;
+    /* Permite que este grupo crezca y ocupe el espacio disponible
+       entre el logo y los iconos. */
+    flex-grow: 1;
+    /* Separa los elementos 'Novedades' de forma equitativa
+       dentro del espacio que #enlaces-principales ha ocupado. */
+    justify-content: space-evenly;
+    /* Eliminar los estilos por defecto de todo */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#enlaces a,
+#enlaces a:visited,
+#enlaces a:hover,
+#enlaces a:active {
+    text-decoration: none;
+    color: #333333;
+}
+#iconos{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#letras{
+    text-align: center;
+    margin: 0;
+    font-family: 'Griffy', cursive;
+    margin-top: 13px;
+}
+.cajaProductos{
+    display: flex;
+    /* Pone los ítems en fila. Si no caben, salta a la siguiente línea. */
+    flex-wrap: wrap; 
+    /* Distribuye el espacio entre y alrededor de los productos. */
+    justify-content: space-evenly; 
+    padding: 20px 0;
+}
+.producto{
+    display: flex; display: flex;
+    flex-direction: column; /* Pone Nombre, Imagen y Precio uno debajo del otro */
+    
+    /* Le dice a cada producto que ocupe el 22% del espacio (4 * 22% = 88%, dejando 12% para espacios) */
+    width: 22%; 
+    box-sizing: border-box; 
+    align-items: center; /* Centra Nombre, Imagen y Precio horizontalmente */
+    text-align: center;
+    margin-bottom: 20px; /* Separación vertical entre filas */
+}
+.producto img{
+     /* CLAVE: Asegura que la imagen se encoja para caber en el 22% de ancho asignado */
+    width: 100%; 
+    max-width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+.producto .nombre{
+    margin: 5px 0 5px 0;
+    font-weight: bold;
+}
+.producto .precioColor{
+    margin: 5px 0 10px 0;
+    color: green;
+}
+.titulo{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 2;
+    height: 50px;
+    font-size: 20px;
+    color: black;
+    padding-left: 10px;
+    font-weight: bold;
+}
+/* aqui solo actua la disposición, y la altura por ejemplo*/
+.precio{
+    flex-grow: 1;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+.precioColor{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    height: 100%;
+    font-size: 20px;
+}
+.camisetasIndex{
+    display: flex;
+    justify-content: space-around;
+}
+footer{
+    display: flex;
+    margin: 0;
+    background-color: black;
+    width: 100%;
+}
+#izquierda{
+    width: 500px;
+}
+#logoFooter{
+    margin-top: 25px;
+    margin-left: 15px;
+    /* Aplica un efecto de inversión a todos los colores del
+    elemento al que se aplica (y a sus hijos).*/
+    filter: invert(100%);
+}
+#textoFooter{
+    width: 163px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.parrafosFooter{
+    display: flex;
+    padding-left: 30px;
+    color: white;
+}
+#logoInstagram{
+    display: inline;
+    filter: invert(100%);
+}
+#logoFb{
+    display: inline;
+    filter: invert(100%);
+}
+#logoX{
+    display: inline;
+}
+#centro{
+    display: flex;
+    width: 400px;
+    height: 200px;
+    align-items: center;
+    height: 100%;
+}
+.segundaCaja{
+    display: flex;
+    background-color:black;
+    height: 150px;
+    margin-top: 9px;
+    justify-content: center;
+    margin-left: 100px;
+}
+#parrafo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    transition: font-size 0.3s ease-in-out;
+    color: white;
+}
+#parrafo:hover, 
+#parrafo:active {
+    /* Aumenta el tamaño de la fuente al 150% del tamaño base (15px * 1.5 = 22.5px) */
+    font-size: 120%; 
+    /* Opcional: Asegúrate de que el cursor cambie para indicar que es clickeable */
+    cursor: pointer; 
+
+}
+#derecha{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    justify-content: end;
+}

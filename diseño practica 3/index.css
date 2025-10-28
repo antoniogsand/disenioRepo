@@ -1,0 +1,236 @@
+:root {
+    /* declaración de variables para usar en todo el body.
+    Con la pseudoclase root les doy más una especificidad mayor a html */
+    --color-principal: #6A1B9A;
+    --color-secundario: #1E88E5;
+    --color-texto-claro: #F5F5F5;
+    --color-acento: #FFC107;
+    --padding-general: 20px;
+}
+header{
+    /* para colores con valores hexadecimales
+    hay que poner # antes del valor */
+    font-family: 'Arial', sans-serif;
+    padding: 10px 20px;
+}
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+#enlaces{
+    display: flex;
+    /* Permite que este grupo crezca y ocupe el espacio disponible
+       entre el logo y los iconos. */
+    flex-grow: 1;
+    /* Separa los elementos 'Novedades' de forma equitativa
+       dentro del espacio que #enlaces-principales ha ocupado. */
+    justify-content: space-evenly;
+    /* Eliminar los estilos por defecto de todo */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#enlaces a,
+#enlaces a:visited,
+#enlaces a:hover,
+#enlaces a:active {
+    text-decoration: none;
+    color: #333333;
+}
+#iconos{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--color-texto-claro);
+    margin: 0;
+    display:grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+}
+
+.principal {
+    margin: 0 ;   
+    padding: 0 var(--padding-general);
+}
+.cajaTexto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 60vh; /* altura mínima que debe tener un elemento, el 60% de la ventana actual del navegador */
+    background-color: rgba(0, 0, 0, 0.5);
+    background-position: center;
+    padding: 40px var(--padding-general);
+    border-radius: 10px;
+    margin-top: 20px;  
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* sombreado de la caja */
+}
+
+.cajaTexto h1 {
+    font-size: 3em;
+    color: var(--color-acento);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px var(--color-principal); /* texto justo detrás que se desplaza en horizontal y
+    vertical un poco para que haga efecto de sombra  */
+}
+
+.cajaTexto .subtitulo {
+    font-size: 18px;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+.botonNovedades {
+    display: inline-block;
+    background-color: var(--color-secundario);
+    color: var(--color-texto-claro);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.botonNovedades:hover {
+    background-color: var(--color-principal);
+    transform: translateY(-2px);
+}
+
+.textoTarjetas{
+    color: black;
+}
+
+.tematicasSeccion {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.tematicasSeccion h2 {
+    color: var(--color-acento);
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.tematicasGrid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas salten a la siguiente línea al hacer la pantalla más pequeña */
+    gap: var(--padding-general); /* Espacio entre las tarjetas */
+    justify-content: center;
+}
+
+.tematicaTarjeta {
+    background-color: rgba(70, 70, 70, 0.3); /* Fondo semitransparente oscuro */
+    padding: var(--padding-general);
+    border-radius: 8px;
+    flex: 1 1 300px; /* Flex Grow: 1, Flex Shrink: 1, Base Width: 300px (Responsive!) */
+    min-width: 250px;
+    max-width: 350px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-left: 5px solid var(--color-principal);
+    transition: transform 0.3s, border-left-color 0.3s;
+}
+
+.tematicaTarjeta:hover {
+    transform: translateY(-5px);
+    border-left-color: var(--color-acento);
+}
+
+.iconoTarjeta {
+    font-size: 3em;
+    display: block;
+    margin-bottom: 15px;
+    color: var(--color-secundario);
+}
+
+.tematicaTarjeta h3 {
+    color: black;
+    margin-top: 0;
+}
+
+footer{
+    display: flex;
+    margin: 0;
+    background-color: black;
+    width: 100%;
+}
+#izquierda{
+    width: 500px;
+}
+#logoFooter{
+    margin-top: 25px;
+    margin-left: 15px;
+    /* Aplica un efecto de inversión a todos los colores del
+    elemento al que se aplica (y a sus hijos).*/
+    filter: invert(100%);
+}
+#textoFooter{
+    width: 163px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.parrafosFooter{
+    display: flex;
+    padding-left: 30px;
+    color: white;
+}
+#logoInstagram{
+    display: inline;
+    filter: invert(100%);
+}
+#logoFb{
+    display: inline;
+    filter: invert(100%);
+}
+#logoX{
+    display: inline;
+}
+#centro{
+    display: flex;
+    width: 400px;
+    height: 200px;
+    align-items: center;
+    height: 100%;
+}
+.segundaCaja{
+    display: flex;
+    background-color:black;
+    height: 150px;
+    margin-top: 9px;
+    justify-content: center;
+    margin-left: 100px;
+}
+#parrafo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    transition: font-size 0.3s ease-in-out;
+    color: white;
+}
+#parrafo:hover, 
+#parrafo:active {
+    /* Aumenta el tamaño de la fuente al 150% del tamaño base (15px * 1.5 = 22.5px) */
+    font-size: 120%; 
+    /* Opcional: Asegúrate de que el cursor cambie para indicar que es clickeable */
+    cursor: pointer; 
+
+}
+#derecha{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    justify-content: end;
+}

@@ -1,0 +1,205 @@
+body {
+    /* el margin cero es para anular */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display:grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+}
+header{
+    /* para colores con valores hexadecimales
+    hay que poner # antes del valor */
+    font-family: 'Arial', sans-serif;
+    padding: 10px 20px;
+}
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+#enlaces{
+    display: flex;
+    /* Permite que este grupo crezca y ocupe el espacio disponible
+       entre el logo y los iconos. */
+    flex-grow: 1;
+    /* Separa los elementos 'Novedades' de forma equitativa
+       dentro del espacio que #enlaces-principales ha ocupado. */
+    justify-content: space-evenly;
+    /* Eliminar los estilos por defecto de todo */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#enlaces a,
+#enlaces a:visited,
+#enlaces a:hover,
+#enlaces a:active {
+    text-decoration: none;
+    color: #333333;
+}
+#iconos{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#contenedorContacto{
+    display: flex;
+    width: 550px;
+    height: 160px;
+    justify-content: center;
+}
+#contacto{
+    margin-top: 50px;
+    display: flex;
+}
+#bordeTodo{
+    border: 1px black solid;
+    width: 600px;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    border-radius: 3%;
+    margin-bottom: 15px;
+}
+#contenedorParrafos{
+    display: flex;
+    justify-content: center;
+}
+#parrafos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#p1{
+    margin-left: 40px;
+}
+#p2{
+    margin-left: 40px;
+}
+#p3{
+
+    margin-left: 40px;
+}
+#p4{
+    margin-left: 40px;
+}
+#p5{
+    margin-left: 40px;
+}
+#p6{
+    margin-left: 40px;
+    margin-right: 9px;
+}
+#formulario{
+    display: flex;
+    /* para que los elementos vayan hacia abajo*/
+    flex-direction: column;
+    /*se centra en el navegador dentro de su contenedor padre*/
+    margin: auto;
+    width: 550px;
+}
+.campo {
+    display: flex;
+
+    width: 90%; /* Ancho uniforme para todas las filas */
+    margin: 0 auto 15px auto;
+}
+
+.campo label {
+    /* Dar el ancho suficiente para la etiqueta más larga y alinear el texto */
+    width: 150px; 
+    text-align: right; 
+    margin-right: 10px;
+    padding-top: 5px;
+}
+.campo input, 
+.campo select,
+#mensaje_texto { 
+    /* ¡CLAVE! Asegura que todos los campos se expandan para llenar el espacio */
+    flex-grow: 1; 
+}
+#mensaje_texto { 
+    width: auto; 
+    height: 150px; /* Altura deseada para el área de mensaje */
+}
+
+footer{
+    display: flex;
+    margin: 0;
+    background-color: black;
+    width: 100%;
+}
+#izquierda{
+    width: 500px;
+}
+#logoFooter{
+    margin-top: 25px;
+    margin-left: 15px;
+    /* Aplica un efecto de inversión a todos los colores del
+    elemento al que se aplica (y a sus hijos).*/
+    filter: invert(100%);
+}
+#textoFooter{
+    width: 163px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.parrafosFooter{
+    display: flex;
+    padding-left: 30px;
+    color: white;
+}
+#logoInstagram{
+    display: inline;
+    filter: invert(100%);
+}
+#logoFb{
+    display: inline;
+    filter: invert(100%);
+}
+#logoX{
+    display: inline;
+}
+#centro{
+    display: flex;
+    width: 400px;
+    height: 200px;
+    align-items: center;
+    height: 100%;
+}
+.segundaCaja{
+    display: flex;
+    background-color:black;
+    height: 150px;
+    margin-top: 9px;
+    justify-content: center;
+    margin-left: 100px;
+}
+#parrafo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    transition: font-size 0.3s ease-in-out;
+    color: white;
+}
+#parrafo:hover, 
+#parrafo:active {
+    /* Aumenta el tamaño de la fuente al 150% del tamaño base (15px * 1.5 = 22.5px) */
+    font-size: 120%; 
+    /* Opcional: Asegúrate de que el cursor cambie para indicar que es clickeable */
+    cursor: pointer; 
+
+}
+#derecha{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    justify-content: end;
+}

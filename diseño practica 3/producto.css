@@ -1,0 +1,322 @@
+header{
+    /* para colores con valores hexadecimales
+    hay que poner # antes del valor */
+    padding: 10px 20px;
+}
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+#enlaces{
+    display: flex;
+    /* Permite que este grupo crezca y ocupe el espacio disponible
+       entre el logo y los iconos. */
+    flex-grow: 1;
+    /* Separa los elementos 'Novedades' de forma equitativa
+       dentro del espacio que #enlaces-principales ha ocupado. */
+    justify-content: space-evenly;
+    /* Eliminar los estilos por defecto de todo */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#enlaces a,
+#enlaces a:visited,
+#enlaces a:hover,
+#enlaces a:active {
+    text-decoration: none;
+    color: #333333;
+}
+#iconos{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Estilos generales para el cuerpo y el main */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display:grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    font-family: 'Arial', sans-serif;
+}
+
+main {
+    
+    background-color: #fff;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+
+}
+
+.vista-producto {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+.galeria-producto {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 300px;
+}
+.imagen-principal {
+    border: 1px solid #ccc;
+    padding: 5px;
+    aspect-ratio: 1 / 1; /* convierte a un elemento en cuadrado aunque su anchura cambie */
+}
+
+.imagen-principal img,
+.miniaturas-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* La imagen cubre toda
+    el área del contenedor, manteniendo su proporción. Se recortan los bordes para encajar */
+    display: block;
+}
+
+.miniaturas-imagen {
+    /* Contenedor para las 3 imágenes de perfil */
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.miniaturas-imagen img {
+    width: calc(33.33% - 7px);
+    height: 150px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.miniaturas-imagen img:hover {
+    border-color: #007bff;
+}
+
+.detalles-producto {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}
+
+.nombre-producto {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.precio-producto {
+    font-size: 1.5em;
+    color: #b12704;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+.opciones label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Controles de Color y Talla (Círculos) */
+.opciones-color,
+.opciones-talla {
+    display: flex;
+    gap: 10px;
+}
+.opcion-color,
+.opcion-talla {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.opcion-color[data-color="negro"] { background-color: black; border-color: black; }
+.opcion-color[data-color="blanco"] { background-color: white; border-color: #333; }
+.opcion-color[data-color="azul"] { background-color: rgb(41, 212, 212); border-color: #333; }
+.opcion-color[data-color="amarillo"] { background-color: rgb(212, 224, 37); border-color: #333; }
+
+.opcion-talla:hover,
+.opcion-color:hover {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.controles-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.controles-cantidad button {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.2s;
+}
+
+.controles-cantidad button:hover {
+    background-color: #ddd;
+}
+
+.controles-cantidad input {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+
+/* Botones de Acción (AÑADIR y COMPRAR) */
+.acciones {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.acciones button {
+    width: 400px;
+    padding: 12px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.boton-anadir-carrito {
+    background-color: #ff9900;
+    color: white;
+}
+
+.boton-anadir-carrito:hover {
+    background-color: #e68a00;
+}
+
+.boton-comprar-ahora {
+    background-color: #ffa400;
+    color: white;
+}
+
+.boton-comprar-ahora:hover {
+    background-color: #e38d00;
+}
+
+.contenedor-descripcion-producto {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.contenedor-descripcion-producto h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.caja-descripcion-producto {
+    border: 1px solid #ccc;
+    padding: 15px;
+    line-height: 1.6;
+}
+
+footer{
+    display: flex;
+    margin: 0;
+    background-color: black;
+    width: 100%;
+}
+#izquierda{
+    width: 500px;
+}
+#logoFooter{
+    margin-top: 25px;
+    margin-left: 15px;
+    /* Aplica un efecto de inversión a todos los colores del
+    elemento al que se aplica (y a sus hijos).*/
+    filter: invert(100%);
+}
+#textoFooter{
+    width: 163px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.parrafosFooter{
+    display: flex;
+    padding-left: 30px;
+    color: white;
+}
+#logoInstagram{
+    display: inline;
+    filter: invert(100%);
+}
+#logoFb{
+    display: inline;
+    filter: invert(100%);
+}
+#logoX{
+    display: inline;
+}
+#centro{
+    display: flex;
+    width: 400px;
+    height: 200px;
+    align-items: center;
+    height: 100%;
+}
+.segundaCaja{
+    display: flex;
+    background-color:black;
+    height: 150px;
+    margin-top: 9px;
+    justify-content: center;
+    margin-left: 100px;
+}
+#parrafo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    transition: font-size 0.3s ease-in-out;
+    color: white;
+}
+#parrafo:hover, 
+#parrafo:active {
+    /* Aumenta el tamaño de la fuente al 150% del tamaño base (15px * 1.5 = 22.5px) */
+    font-size: 120%; 
+    /* Opcional: Asegúrate de que el cursor cambie para indicar que es clickeable */
+    cursor: pointer; 
+
+}
+#derecha{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    justify-content: end;
+}
