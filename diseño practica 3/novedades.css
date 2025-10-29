@@ -67,7 +67,11 @@ nav{
     box-sizing: border-box; 
     align-items: center; /* Centra Nombre, Imagen y Precio horizontalmente */
     text-align: center;
-    margin-bottom: 20px; /* Separación vertical entre filas */
+    margin-bottom: 20px; /* Separación vertical entre filas */ 
+}
+.producto:hover {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 .producto img{
      /* CLAVE: Asegura que la imagen se encoja para caber en el 22% de ancho asignado */

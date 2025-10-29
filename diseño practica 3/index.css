@@ -31,10 +31,14 @@ nav{
     padding: 0;
     margin: 0;
 }
-#enlaces a,
-#enlaces a:visited,
-#enlaces a:hover,
-#enlaces a:active {
+#enlaces li,
+#enlaces li:visited,
+#enlaces li:hover,
+#enlaces li:active {
+    text-decoration: none;
+    color: #333333;
+}
+#enlaces a{
     text-decoration: none;
     color: #333333;
 }
@@ -66,6 +70,7 @@ body {
     text-align: center;
     min-height: 60vh; /* altura mínima que debe tener un elemento, el 60% de la ventana actual del navegador */
     background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(/imagenes/imagen-portada.png);
     background-position: center;
     padding: 40px var(--padding-general);
     border-radius: 10px;

@@ -120,8 +120,6 @@ main {
     margin-bottom: 20px;
     font-weight: bold;
 }
-
-
 .opciones label {
     display: block;
     margin-bottom: 8px;
@@ -131,10 +129,22 @@ main {
 }
 
 /* Controles de Color y Talla (Círculos) */
+
+.opciones-selector-talla,
+.opciones-selector-color,
+.opciones-selector-cantidad{
+margin-top: 20px;
+}
+
+
 .opciones-color,
 .opciones-talla {
+    margin-top: 10px;
     display: flex;
     gap: 10px;
+}
+.opciones-cantidad{
+    margin-top: 10px;
 }
 .opcion-color,
 .opcion-talla {
