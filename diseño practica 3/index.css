@@ -239,3 +239,7 @@ footer{
     width: 400px;
     justify-content: end;
 }
+span{
+    display: flex;
+    text-align: center;
+}

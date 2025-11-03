@@ -187,11 +187,14 @@ footer{
     font-size: 120%; 
     /* Opcional: Asegúrate de que el cursor cambie para indicar que es clickeable */
     cursor: pointer; 
-
 }
 #derecha{
     display: flex;
     align-items: center;
     width: 400px;
     justify-content: end;
+}
+span{
+    display: flex;
+    text-align: center;
 }
