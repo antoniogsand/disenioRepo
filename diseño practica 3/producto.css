@@ -33,7 +33,11 @@ nav{
     gap: 20px;
     align-items: center;
 }
-
+#musica{
+    display: flex;
+    width: 250px;
+    margin-right: 15px;
+}
 /* Estilos generales para el cuerpo y el main */
 body {
     font-family: Arial, sans-serif;
