@@ -23,9 +23,10 @@
                     <li><a href="calcetines.html">Calcetienes</a></li>
                 </ul>
                 <div id="musica">
-                    <audio autoplay controls loop>
+                    <audio id="miAudio">
                     <source src="Música/Avanti - Mindwave (freetouse.com).mp3" type="audio/mpeg" codecs=“mp3”>
                     </audio>
+                    <button id="boton">reproducir</button>
                 </div>
                 <div id="iconos">
                     <img src="imagenes/lupa.png"width= "18px" height="18px">
@@ -49,22 +50,51 @@
         </div>
 
     <section class="tematicasSeccion">
-        <h2>Lo que Encontrarás:</h2>
-        <div class="tematicasGrid">
+    
+    <br>
+
+    <h2 id="encabezadoCarrusel">¡Camisetas y mucho más!</h2>
+    
+    <div class="carrusel-contenedor">
+        
+        <button class="carrusel-btn btn-anterior" id="btnAnterior">&#10094;</button>
+        
+        <div class="carrusel-track" id="track">
+            
             <article class="tematicaTarjeta">
-                <i class="iconoTarjeta">🎬</i> <h3 class="textoTarjetas">Cine</h3>
-                <p class="textoTarjetas">Desde los títulos más clásicos hasta los éxitos más actuales.</p>
+                <i class="iconoTarjeta">🏖️</i> <h3 class="textoTarjetas">Bañadores</h3>
+                <img id="imagen" src="imagenes/imagenes carrusel/bañador.png" height="120" width="120">
             </article>
             <article class="tematicaTarjeta">
-                <i class="iconoTarjeta">🎮</i> <h3 class="textoTarjetas">Videojuegos</h3>
-                <p class="textoTarjetas">Los mejores clásicos y las novedades del gaming.</p>
+                <i class="iconoTarjeta">🖊️</i> <h3 class="textoTarjetas">Bolígrafos</h3>
+                <img id="imagen" src="imagenes/imagenes carrusel/boligrafo.png" height="120" width="120">
             </article>
             <article class="tematicaTarjeta">
-                <i class="iconoTarjeta">📺</i> <h3 class="textoTarjetas">Series</h3>
-                <p class="textoTarjetas">Las series que más te gustan ahora en tu camiseta.</p>
+                <i class="iconoTarjeta">🩲</i> <h3 class="textoTarjetas">Boxers</h3>
+                <img id="imagen" src="imagenes/imagenes carrusel/boxers.png" height="120" width="120">
             </article>
+
+            <article class="tematicaTarjeta">
+                <i class="iconoTarjeta">🧦</i> <h3 class="textoTarjetas">Calcetines</h3>
+                <img id="imagen" src="imagenes/imagenes carrusel/calcetines.png" height="120" width="120">
+            </article>
+            <article class="tematicaTarjeta">
+                <i class="iconoTarjeta">📓</i> <h3 class="textoTarjetas">Libretas</h3>
+                <img id="imagen" src="imagenes/imagenes carrusel/libreta.png" height="120" width="120">
+            </article>
+            <article class="tematicaTarjeta">
+                <i class="iconoTarjeta">&#128085;</i> <h3 class="textoTarjetas">Pijamas</h3>
+                <img id="imagen" src="imagenes/imagenes carrusel/pijama.png" height="120" width="120">
+            </article>
+            <article class="tematicaTarjeta">
+                <i class="iconoTarjeta">&#9749;</i> <h3 class="textoTarjetas">Tazas</h3>
+                <img id="imagen" src="imagenes/imagenes carrusel/taza.png" height="120" width="120">
+            </article>
+
         </div>
-    </section>
+        <button class="carrusel-btn btn-siguiente" id="btnSiguiente">&#10095;</button>
+    </div>
+</section>
 </main>
 
     <footer>
@@ -109,5 +139,6 @@
         </p>
         </div>
     </footer>
+    <script src="js.js"></script>
 </body>
 </html>

@@ -45,8 +45,33 @@ nav{
 }
 #musica{
     display: flex;
-    width: 250px;
-    margin-right: 15px;
+    margin-right: 20px;
+}
+/* CSS Keyframes */
+@keyframes pulsacion {
+    0% { 
+        transform: scale(1); 
+        box-shadow: 0 0 0 0 rgba(106, 27, 154, 0.7); /* Sin sombra al inicio */
+    }
+    50% { 
+        transform: scale(1.2); /* Crece un 20% */
+        box-shadow: 0 0 20px 10px rgba(106, 27, 154, 0); /* La sombra se expande y se desvanece */
+    }
+    100% { 
+        transform: scale(1); 
+        box-shadow: 0 0 0 0 rgba(106, 27, 154, 0); /* Vuelve a la normalidad */
+    }
+}
+#boton.activo {
+    animation: pulsacion 1.5s infinite;
+}
+#boton{
+    background-color: white;
+    border: none;
+    font-weight: bold;
+}
+#boton:hover{
+    cursor: pointer;
 }
 #letras{
     text-align: center;
