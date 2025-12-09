@@ -142,9 +142,7 @@ body {
 #textoVideo{
     text-align: center;
     color: black;
-}
-pre{
-font-family: "Momo Signature", cursive;
+    font-family: "Momo Signature", cursive;
 }
 #cajaVideo{
 display: flex;
@@ -154,6 +152,7 @@ justify-content: center;
     width: 1000px;
     height: 370px;
     border-radius: 5%;
+    border: none;
 }
 
 /* --- ESTILOS DEL CARRUSEL --- */
