@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuraciones de Gestión</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        h1 {
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+
+        .card {
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px red
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: black;
+            margin: 0;
+        }
+
+        /* Colores distintivos */
+        .js-style { border-top: 5px solid #f7df1e; } /* Amarillo JS */
+        .jq-style { border-top: 5px solid #0769ad; } /* Azul jQuery */
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Ejercicios</h1>
+    
+    <div class="grid">
+        <a href="javascript-1.html" class="card js-style">
+            <h3>Gestión de elementos</h3>
+            <p>JavaScript Vanilla</p>
+        </a>
+
+        <a href="practica8.html" class="card jq-style">
+            <h3>Gestión Elementos</h3>
+            <p>jQuery</p>
+        </a>
+
+        <a href="humanJs.html" class="card js-style">
+            <h3>Human Benchmark</h3>
+            <p>JavaScript Vanilla</p>
+        </a>
+
+        <a href="jquery.html" class="card jq-style">
+            <h3>Human Benchmark</h3>
+            <p>jQuery</p>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
