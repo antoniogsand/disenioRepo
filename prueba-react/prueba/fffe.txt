@@ -1,0 +1,86 @@
+import React, { useState } from 'react';
+
+const Contador = ({ id, valor, onUpdate, onReset }) => {
+  const [paso, setPaso] = useState(1); // El input para el incremento
+
+  return (
+    <div style={{ border: '1px solid #ccc', padding: '10px', margin: '10px', borderRadius: '8px' }}>
+      <h4>Contador #{id}</h4>
+      <h2>{valor}</h2>
+      <input 
+        type="number" 
+        value={paso} 
+        onChange={(e) => setPaso(Number(e.target.value))} 
+        style={{ width: '50px', marginBottom: '10px' }}
+      />
+      <br />
+      <button onClick={() => onUpdate(id, paso)}>Aumentar</button>
+      <button onClick={() => onUpdate(id, -paso)}>Decrementar</button>
+      <button onClick={() => onReset(id)}>Reset</button>
+    </div>
+  );
+};
+Esto dentro de App
+import React, { useState } from 'react';
+import Contador from './Contador';
+
+const App = () => {
+  const [contadores, setContadores] = useState([]);
+  const [sumaTotal, setSumaTotal] = useState(0);
+
+  // Añadir nuevo contador
+  const añadirContador = () => {
+    const nuevo = { id: Date.now(), valor: 0 };
+    setContadores([...contadores, nuevo]);
+  };
+
+  // Actualizar valor y suma total (O(1) para la suma)
+  const actualizarContador = (id, cantidad) => {
+    setContadores(prev => prev.map(c => 
+      c.id === id ? { ...c, valor: c.valor + cantidad } : c
+    ));
+    setSumaTotal(prevSuma => prevSuma + cantidad);
+  };
+
+  // Resetear y ajustar la suma total
+  const resetearContador = (id) => {
+    setContadores(prev => prev.map(c => {
+      if (c.id === id) {
+        setSumaTotal(prevSuma => prevSuma - c.valor);
+        return { ...c, valor: 0 };
+      }
+      return c;
+    }));
+  };
+
+  const media = contadores.length > 0 ? (sumaTotal / contadores.length).toFixed(2) : 0;
+
+  return (
+    <div style={{ padding: '20px', fontFamily: 'Arial' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <h1>Gestión de Contadores</h1>
+        <button onClick={añadirContador} style={{ backgroundColor: '#333', color: 'white' }}>
+          + Añadir contador
+        </button>
+      </div>
+
+      <div style={{ display: 'flex', gap: '50px', marginBottom: '20px' }}>
+        <div><strong>Suma Total:</strong> <div>{sumaTotal}</div></div>
+        <div><strong>Media:</strong> <div>{media}</div></div>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+        {contadores.map(c => (
+          <Contador 
+            key={c.id} 
+            {...c} 
+            onUpdate={actualizarContador} 
+            onReset={resetearContador} 
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default App;

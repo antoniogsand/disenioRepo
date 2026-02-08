@@ -1,0 +1,22 @@
+article{
+    display: 'flex';
+    color: '#fff';
+    align-items: center;
+    font-size: 0.8rem;
+}
+article header{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+article header div{
+    display: flex;
+    flex-direction: column;
+}
+article header span{
+    opacity: 0.6;
+}
+article img{
+    width: 48px;
+    
+}
