@@ -1,0 +1,10 @@
+services:
+  api:
+    build: ./ejemplo-api
+    ports:
+      - "${PORT_API}:${PORT_API}" # Toma el valor de PORT_API del archivo .env
+
+  frontend:
+    build: ./ejemplo-front/ejemplo-frontend
+    ports:
+      - "${PORT_FRONT}:${PORT_FRONT}" # Toma el valor de PORT_FRONT del archivo .env

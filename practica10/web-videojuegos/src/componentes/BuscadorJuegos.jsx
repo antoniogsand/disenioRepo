@@ -6,11 +6,10 @@ const API_KEY = '750f16461d304a25a7108e02a2bb4f92';
 function BuscadorJuegos() {
   const [termino, setTermino] = useState('');
   const [juegos, setJuegos] = useState([]);
-  const [pagina, setPagina] = useState(1); // Controla qué página de la API pedimos
+  const [pagina, setPagina] = useState(1);
   const [cargando, setCargando] = useState(false);
   const [tieneMas, setTieneMas] = useState(true);
 
-  //Función para pedir juegos (sirve para carga inicial, búsqueda y scroll)
   const fetchJuegos = useCallback(async (searchQuery, pageNum, append = false) => {
     if (cargando) return;
     setCargando(true);
@@ -24,7 +23,6 @@ function BuscadorJuegos() {
       const data = await res.json();
       
       if (data.results) {
-        // Si 'append' es true, se suman los nuevos a los que ya había
         setJuegos(prev => append ? [...prev, ...data.results] : data.results);
         setTieneMas(data.next !== null);
       }
@@ -35,12 +33,10 @@ function BuscadorJuegos() {
     }
   }, [cargando]);
 
-  //Carga inicial
   useEffect(() => {
     fetchJuegos('', 1);
   }, []);
 
-  // 3. Detectar cuando se llega al final de la página
   useEffect(() => {
     const handleScroll = () => {
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500 && !cargando && tieneMas) {
@@ -56,11 +52,10 @@ function BuscadorJuegos() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [cargando, tieneMas, termino, fetchJuegos]);
 
-  //Manejar búsqueda
   const handleBusqueda = (e) => {
     const valor = e.target.value;
     setTermino(valor);
-    setPagina(1); //Resetea a la primera página al buscar algo nuevo
+    setPagina(1);
     fetchJuegos(valor, 1, false);
   };
 

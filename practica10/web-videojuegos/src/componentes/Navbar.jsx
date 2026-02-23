@@ -34,6 +34,9 @@ function Navbar() {
                 <li>
                 <Link to="/buscar" className="...">Buscar Juegos</Link>
                 </li>
+                <li>
+                  <Link to="/publishers" className="hover:text-blue-400 transition-colors">Publishers</Link>
+                </li>
           </ul>
         </div>
       </div>
